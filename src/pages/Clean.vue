@@ -6,7 +6,7 @@
         <h2 class="main__clean-title">{{ $t("clean.title") }}</h2>
         <p class="main__clean-text">{{ $t("clean.text") }}</p>
         <div class="main__clean-block">
-          <div class="main__clean-item" v-for="item in clean" :key="item.id">
+          <router-link :to="/clean/ + item.id" class="main__clean-item" v-for="item in clean" :key="item.id">
             <img :src="item.img" alt="" class="main__clean-img" />
             <h2 class="main__clean-block_title">{{ item.title }}</h2>
             <p class="main__clean-block_text">
@@ -19,7 +19,7 @@
               class="main__clean-link arrow-right"
               >{{ $t("clean.more") }}</router-link
             >
-          </div>
+          </router-link>
         </div>
       </div>
     </div>
